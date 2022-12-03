@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+      crossorigin="anonymous"
+    />
+
+    <title>UI/UX Design</title>
+  </head>
+
+  <body>
+    {% if current_user.is_authenticated %}
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+      <!-- <nav class="class="navbar navbar-dark bg-dark""></nav> sa dropdown menijem! -->
+      <a class="navbar-brand" href="#">Product Arena</a>
+      <!-- <img src="https://imgur.com/9bxjdgJ" width="222" height="222"> -->
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="navbar-brand" id="link_" href="{{ url_for('home_page') }}"
+              >Pocetna <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="navbar-brand"
+              id="link_"
+              href="{{ url_for('fullstack_page') }}"
+              >Full Stack Developer</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="navbar-brand"
+              id="link_"
+              href="{{ url_for('backend_page') }}"
+              >Backend Developer</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="navbar-brand" id="link_" href="{{ url_for('qa_page') }}"
+              >Quality Assurance</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="navbar-brand" id="link_" href="{{ url_for('uiux_page') }}"
+              >UI/UX Dizajner</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="navbar-brand"
+              id="link_"
+              href="{{ url_for('managment_page') }}"
+              >Menadzment Role</a
+            >
+          </li>
+        </ul>
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" id="link_"
+              >Welcome, {{ current_user.username }}
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="link_" href="{{ url_for('logout_page') }}"
+              >Logout
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="center">
+      <div class="head-page">
+        <h3 class="h3-about-title aligne-left"><b>UI/UX Dizajner</b></h3>
+        <div class="about-text">
+          Da bi bio dobar UI/UX dizajner, treba da imaš visoku sposobnost
+          razumijevanja krajnjeg korisnika i tržišta. Tvoj zadatak je da brzo
+          praviš i testiraš rješenja za probleme koje korisnici imaju i da ta
+          rješenja dokumentuješ kako bi se mogla realizirati i pustiti na
+          tržište.<br /><br />Kroz različite metodologije i strukture možete
+          brzo doći do rješenja i testirati ih. Cilj je da što brže dođemo do
+          tačke da testiramo rješenja i pravimo iteracije. Ovaj proces koji se
+          može još nazvati i "Fail fast", nam omogućuje da ne pravimo velike
+          greške tokom razvoja produkta.<br /><br />Alati nam pomažu da lakše
+          komuniciramo i realizujemo ideje. Trenutno ima mnogo korisnih alata
+          koji bi nam mogli pomoći u ovom procesu, ali mi u Tech387 najviše
+          radimo sa Figmom i Adobe alatima. Ovo su alati koje ćemo koristiti:<br />-
+          <strong>Figma</strong>
+          <em>za pravljenje UI screenova, prototipa i design systema</em><br />-
+          <strong>FigJam</strong>
+          <em>kolaboraciju i komunikaciju sa developerima i klijentima<br /></em
+          >- <strong>Photoshop</strong>
+          <em>za uređivanje i manipulisanje slika</em><br />-
+          <strong>Illustrator</strong> <em>za pravljenje vektor grafika</em
+          ><br />- <strong>Webflow</strong>
+          <em>za pravljenje landinge page-eva</em><br /><br />U dolje navedenim
+          videima možda ćete se sresti i sa drugim alatima, ali mi preferiramo
+          gore navedene. Jedan primjer je koji ćete sigurno vidjeti u videima da
+          se koristi je Miro, dok mi u Tech387 koristimo FigJam, s oba alata se
+          mogu postići isti rezultati.
+          <br />
+        </div>
+      </div>
+      <br />
+      <div class="w-dyn-list">
+        <div class="w-dyn-list">
+          <div role="list" class="w-dyn-items">
+            <div role="listitem" class="w-dyn-item">
+              <div class="learning-card">
+                <div class="number-cirkle"><div>1</div></div>
+                <div class="inner-learning-box">
+                  <h4 class="h4-quote margingb-8">
+                    <b>Tools: Figma Basics</b>
+                  </h4>
+                  <div class="arena-text marginb-24">
+                    U ovom videu ćete naučiti osnove Figma-e. Alat uz pomoć
+                    kojeg ćete realizovati vaše ideje i praviti prototipe.
+                  </div>
+                  <a
+                    href="https://www.youtube.com/watch?v=FTFaQWZBqQ8"
+                    class="button build w-button"
+                    >POGLEDAJ</a
+                  >
+                </div>
+              </div>
+            </div>
+            <br />
+            <div role="listitem" class="w-dyn-item">
+              <div class="learning-card">
+                <div class="number-cirkle"><div>2</div></div>
+                <div class="inner-learning-box">
+                  <h4 class="h4-quote margingb-8">
+                    <b>Tools: FigJam Basics</b>
+                  </h4>
+                  <div class="arena-text marginb-24">
+                    FigJam je alat koji će nam pomoći u vizualizaciji podataka,
+                    kolaboraciji i brainstormingom sa timom.
+                  </div>
+                  <a
+                    href="https://www.youtube.com/watch?v=HGsMNYq889U"
+                    class="button build w-button"
+                    >POGLEDAJ</a
+                  >
+                </div>
+              </div>
+            </div>
+            <br />
+            <div role="listitem" class="w-dyn-item">
+              <div class="learning-card">
+                <div class="number-cirkle"><div>3</div></div>
+                <div class="inner-learning-box">
+                  <h4 class="h4-quote margingb-8">
+                    <b>Tools: Photoshop Basics</b>
+                  </h4>
+                  <div class="arena-text marginb-24">
+                    Osnove Photoshopa su nam potrebne kako bismo mogli
+                    manipulisati slike.
+                  </div>
+                  <a
+                    href="https://helpx.adobe.com/photoshop/how-to/ps-basics-fundamentals.html?playlist=/services/playlist.helpx/products:SG_CREATIVECLOUD/learn-path:get-started/set-header:ccx-designer/playlist:orientation/en_us.json&amp;ref=helpx.adobe.com"
+                    class="button build w-button"
+                    >POGLEDAJ</a
+                  >
+                </div>
+              </div>
+            </div>
+            <br />
+            <div role="listitem" class="w-dyn-item">
+              <div class="learning-card">
+                <div class="number-cirkle"><div>4</div></div>
+                <div class="inner-learning-box">
+                  <h4 class="h4-quote margingb-8">
+                    <b>Tools: Illustrator Basics</b>
+                  </h4>
+                  <div class="arena-text marginb-24">
+                    Osnove Illustratora su nam potrebne kako bi mogli praviti
+                    vektor grafike.
+                  </div>
+                  <a
+                    href="https://helpx.adobe.com/illustrator/how-to/ai-basics-fundamentals.html?playlist=/services/playlist.helpx/products:SG_CREATIVECLOUD/learn-path:get-started/set-header:ccx-designer/playlist:orientation/en_us.json&amp;ref=helpx.adobe.com"
+                    class="button build w-button"
+                    >POGLEDAJ</a
+                  >
+                </div>
+              </div>
+            </div>
+            <br />
+            <div role="listitem" class="w-dyn-item">
+              <div class="learning-card">
+                <div class="number-cirkle"><div>5</div></div>
+                <div class="inner-learning-box">
+                  <h4 class="h4-quote margingb-8">
+                    <b>Tools: Webflow Basics</b>
+                  </h4>
+                  <div class="arena-text marginb-24">
+                    Osnove Webflow-a su nam potrebne kako bi mogli napraviti
+                    jednostavne Landing Page-ove. Razumijevanje ovog alata će
+                    nam dati i same osnove pravljenja Web Stranice koje će nam
+                    kasnije biti potrebno kada budemo usko radili sa
+                    developerima. Webflow koriste UI/UX Dizajneri.
+                  </div>
+                  <a
+                    href="https://www.youtube.com/watch?v=cZlnnbHNKrE"
+                    class="button build w-button"
+                    >POGLEDAJ</a
+                  >
+                </div>
+              </div>
+            </div>
+            <br />
+            <div role="listitem" class="w-dyn-item">
+              <div class="learning-card">
+                <div class="number-cirkle"><div>6</div></div>
+                <div class="inner-learning-box">
+                  <h4 class="h4-quote margingb-8">
+                    <b>Workshops: Quick Intro</b>
+                  </h4>
+                  <div class="arena-text marginb-24">
+                    U ovom videu ćete naučiti kada, kako i zašto pravimo
+                    Workshopove.
+                  </div>
+                  <a
+                    href="https://www.youtube.com/watch?v=Q-Y51sXax-M"
+                    class="button build w-button"
+                    >POGLEDAJ</a
+                  >
+                </div>
+              </div>
+            </div>
+            <br />
+            <div role="listitem" class="w-dyn-item">
+              <div class="learning-card">
+                <div class="number-cirkle"><div>7</div></div>
+                <div class="inner-learning-box">
+                  <h4 class="h4-quote margingb-8">
+                    <b>Workshops: Playbook</b>
+                  </h4>
+                  <div class="arena-text marginb-24">
+                    Ova knjiga nam daje bolje razumijevanje na koji način se
+                    rade Workshopi sa primjerima.
+                  </div>
+                  <a
+                    href="https://click.convertkit-mail4.com/8kug8399wvh3u900dgal/6qheh8hpw52mdzso/aHR0cHM6Ly9kb3dubG9hZC5maWxla2l0Y2RuLmNvbS9kL2llTnJFVWNFTHdzWVk5UXh5WHRwN0gvdjJSaEtNTTFmZkdNcW1GTms5MXlSZA=="
+                    class="button build w-button"
+                    >POGLEDAJ</a
+                  >
+                </div>
+              </div>
+            </div>
+            <br />
+            <div role="listitem" class="w-dyn-item">
+              <div class="learning-card">
+                <div class="number-cirkle"><div>8</div></div>
+                <div class="inner-learning-box">
+                  <h4 class="h4-quote margingb-8">
+                    <b>Workshops: Design Sprint</b>
+                  </h4>
+                  <div class="arena-text marginb-24">
+                    Design Sprintove koristimo da bismo u što kraćem roku došli
+                    do rješenja koja možemo testirati. U ovom videu ćete naučiti
+                    kako i zašto nam treba Design Sprint process.
+                  </div>
+                  <a
+                    href="https://www.youtube.com/watch?v=Uu8jmVhwj_o"
+                    class="button build w-button"
+                    >POGLEDAJ</a
+                  >
+                </div>
+              </div>
+            </div>
+            <br />
+            <div role="listitem" class="w-dyn-item">
+              <div class="learning-card">
+                <div class="number-cirkle"><div>9</div></div>
+                <div class="inner-learning-box">
+                  <h4 class="h4-quote margingb-8">
+                    <b>Workshops: Design Sprint Every Exercise</b>
+                  </h4>
+                  <div class="arena-text marginb-24">
+                    U ovoj seriji videa ćete naučiti kako i na koji način se
+                    tačno izvode sve vježbe unutar Design Sprinta.
+                  </div>
+                  <a
+                    href="https://www.youtube.com/playlist?list=PLxk9zj3EDi0X5CgoFckoheIFAx-uT2i7j"
+                    class="button build w-button"
+                    >POGLEDAJ</a
+                  >
+                </div>
+              </div>
+            </div>
+            <br />
+            <div role="listitem" class="w-dyn-item">
+              <div class="learning-card">
+                <div class="number-cirkle"><div>10</div></div>
+                <div class="inner-learning-box">
+                  <h4 class="h4-quote margingb-8">
+                    <b> Design System: Quick Intro</b>
+                  </h4>
+                  <div class="arena-text marginb-24">
+                    U ovom videu ćete saznati šta su to Design Systemi i kako ih
+                    koristimo.
+                  </div>
+                  <a
+                    href="https://www.youtube.com/watch?v=wc5krC28ynQ"
+                    class="button build w-button"
+                    >POGLEDAJ</a
+                  >
+                </div>
+              </div>
+            </div>
+            <br />
+            <div role="listitem" class="w-dyn-item">
+              <div class="learning-card">
+                <div class="number-cirkle"><div>11</div></div>
+                <div class="inner-learning-box">
+                  <h4 class="h4-quote margingb-8">
+                    <b>Design System: Material Design</b>
+                  </h4>
+                  <div class="arena-text marginb-24">
+                    "Material Design'' je dizajn sistem razvijen od Google-a i
+                    jedan je od najbolje dokumentovanih. Ovdje možeš pronaći svu
+                    dokumentaciju. Detaljno je proučite i pokušajte da je
+                    iskoristite.
+                  </div>
+                  <a
+                    href="https://m3.material.io/"
+                    class="button build w-button"
+                    >POGLEDAJ</a
+                  >
+                </div>
+              </div>
+            </div>
+            <br />
+            <div role="listitem" class="w-dyn-item">
+              <div class="learning-card">
+                <div class="number-cirkle"><div>12</div></div>
+                <div class="inner-learning-box">
+                  <h4 class="h4-quote margingb-8"><b>Branding Basics</b></h4>
+                  <div class="arena-text marginb-24">
+                    Ova serija videa će vas provesti kroz čitav Branding Proces
+                    jednog proizvoda. Proći ćete kroz osnove pravljenja stila,
+                    logotipa, tipografije, prezentovanja svog rada i mnogo više.
+                  </div>
+                  <a
+                    href="https://youtube.com/playlist?list=PLzKJi2GjpkEFsV13D3WPm5s6tZVkvKJ1-"
+                    class="button build w-button"
+                    >POGLEDAJ</a
+                  >
+                </div>
+              </div>
+            </div>
+            <br />
+            <div role="listitem" class="w-dyn-item">
+              <div class="learning-card">
+                <div class="number-cirkle"><div>13</div></div>
+                <div class="inner-learning-box">
+                  <h4 class="h4-quote margingb-8"><b>Design Handoffs</b></h4>
+                  <div class="arena-text marginb-24">
+                    U ovom videu možete vidjeti kako jedan produktni tim
+                    komunicira i možete naučiti kako vi kao dizajner možete
+                    pomoći vašem produkt development timu.
+                  </div>
+                  <a
+                    href="https://www.youtube.com/watch?v=vlXubgDdP14&amp;t=454s"
+                    class="button build w-button"
+                    >POGLEDAJ</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br />
+    <br />
+    {% else %}
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="navbar-brand" id="link_" href="{{ url_for('login_page') }}"
+            >Login</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="navbar-brand"
+            id="link_"
+            href="{{ url_for('register_page') }}"
+            >Register</a
+          >
+        </li>
+      </ul>
+    </nav>
+    {% endif %}
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+  <style>
+    body {
+      background-color: #ffffff;
+      color: rgb(0, 0, 0);
+    }
+
+    #link_:hover {
+      color: rgb(56, 255, 82);
+    }
+
+    .center {
+      margin: auto;
+      width: 60%;
+      padding: 10px;
+      text-align: left;
+      padding-top: 5%;
+    }
+
+    /* .navbar-default {
+    background-color: black;
+    border-color: wheat;
+} */
+  </style>
+</html>

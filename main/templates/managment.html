@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+      crossorigin="anonymous"
+    />
+
+    <title>Project Managment</title>
+  </head>
+
+  <body>
+    <!-- ovaj uslov nije vise potreban zbog login_required ali zbog manjka vremena mora ostati -->
+    {% if current_user.is_authenticated %}
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+      <!-- <nav class="class="navbar navbar-dark bg-dark""></nav> sa dropdown menijem! -->
+      <a class="navbar-brand" href="#">Product Arena</a>
+      <!-- <img src="https://imgur.com/9bxjdgJ" width="222" height="222"> -->
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="navbar-brand" id="link_" href="{{ url_for('home_page') }}"
+              >Pocetna <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="navbar-brand"
+              id="link_"
+              href="{{ url_for('fullstack_page') }}"
+              >Full Stack Developer</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="navbar-brand"
+              id="link_"
+              href="{{ url_for('backend_page') }}"
+              >Backend Developer</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="navbar-brand" id="link_" href="{{ url_for('qa_page') }}"
+              >Quality Assurance</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="navbar-brand" id="link_" href="{{ url_for('uiux_page') }}"
+              >UI/UX Dizajner</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="navbar-brand"
+              id="link_"
+              href="{{ url_for('managment_page') }}"
+              >Menadzment Role</a
+            >
+          </li>
+        </ul>
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" id="link_"
+              >Welcome, {{ current_user.username }}
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="link_" href="{{ url_for('logout_page') }}"
+              >Logout
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="center">
+      <div class="head-page">
+        <h3 class="h3-about-title aligne-left"><b>Menadžment Role</b></h3>
+        <div class="about-text">
+          Menadžerske role nisu za svakog. Da bi bio/bila dobar menadžer moraš
+          imati razvijen visok stepen "people skills"-a. Također moraš biti u
+          stanju da slušaš, razumiješ, rješavaš probleme, budeš proaktivan/na te
+          da što manje zaboravljaš! Ovo su kvalitete dobrog menadžera. Tek nakon
+          što su ove stavke na zadovoljavajućem nivou možeš se fokusirati na
+          učenje raznih metoda i metodologija koje će ti pomoći da vodiš timove
+          uspješno!<br /><br />Zapamti, menadžer mora biti u stanju da balansira
+          potrebe tima i potrebe projekta, taj balans je ono što čini ključnu
+          razliku između dobrog i lošeg rezultata!<br /><br />Topli savjet, što
+          više stvari zapisuj, pokušaj da razumiješ svaki aspekt produkta te
+          zašto se stvari baš tako rade. Postavi se u ulogu da vodiš tim i da
+          krećeš iz početka. Koji su to prvi koraci koji te čekaju? Kako izgleda
+          tvoj dan i koji su to procesi koje pratiš da bi se proizvod uspješno
+          razvio? Ovo ti je dobro mjerilo da rangiraš svoje znanje!<br /><br />Sretno!
+          🙏
+        </div>
+      </div>
+      <br />
+      <div class="w-dyn-list">
+        <div role="list" class="w-dyn-items">
+          <div role="listitem" class="w-dyn-item">
+            <div class="learning-card">
+              <div class="number-cirkle"><div>1</div></div>
+              <div class="inner-learning-box">
+                <h4 class="h4-quote margingb-8">
+                  Product Management for Dummies
+                </h4>
+                <div class="arena-text marginb-24">
+                  Osnove Produkt Menadžmenta, šta ova rola obuhvata i koje su
+                  joj obaveze.
+                </div>
+                <a
+                  href="https://www.youtube.com/watch?v=fiOpMUrzEfY"
+                  target="_blank"
+                  class="button build w-button"
+                  id="link_"
+                  >POGLEDAJ</a
+                >
+              </div>
+            </div>
+          </div>
+          <br />
+          <div role="listitem" class="w-dyn-item">
+            <div class="learning-card">
+              <div class="number-cirkle"><div>2</div></div>
+              <div class="inner-learning-box">
+                <h4 class="h4-quote margingb-8">Agile Software Development</h4>
+                <div class="arena-text marginb-24">
+                  Način razvoja softwera na Agilni način. Iako ova tema nije
+                  direktno vezano za menadžment, potrebno je da znaš o čemu se
+                  radi. Potrebno je da razumiješ na koji način Agilni mehanizam
+                  razvoja softwera funkcioniše.
+                </div>
+                <a
+                  href="https://www.youtube.com/watch?v=UxMpn92vGXs"
+                  target="_blank"
+                  class="button build w-button"
+                  id="link_"
+                  >POGLEDAJ</a
+                >
+              </div>
+            </div>
+          </div>
+          <br />
+          <div role="listitem" class="w-dyn-item">
+            <div class="learning-card">
+              <div class="number-cirkle"><div>3</div></div>
+              <div class="inner-learning-box">
+                <h4 class="h4-quote margingb-8">Agile Project Management</h4>
+                <div class="arena-text marginb-24">
+                  Način razvoja softwera zasnovan na Agilnom mehanizmu iz
+                  perspektive menadžera.
+                </div>
+                <a
+                  href="https://www.youtube.com/watch?v=nrfl6GAQy2s"
+                  target="_blank"
+                  class="button build w-button"
+                  id="link_"
+                  >POGLEDAJ</a
+                >
+              </div>
+            </div>
+          </div>
+          <br />
+          <div role="listitem" class="w-dyn-item">
+            <div class="learning-card">
+              <div class="number-cirkle"><div>4</div></div>
+              <div class="inner-learning-box">
+                <h4 class="h4-quote margingb-8">
+                  Frontend &amp; Backend Development
+                </h4>
+                <div class="arena-text marginb-24">
+                  Backend i frontend nisu direktno vezani za menadžment, ali je
+                  potrebno da razumiješ šta je to backend, a šta frontend. Ovo
+                  je samo kratki uvod, ali ako budeš imao/la dovoljno vremena
+                  toplo preporučujemo da pogledaš ili pročitaš još sadržaja na
+                  ovu temu.
+                </div>
+                <a
+                  href="https://www.youtube.com/watch?v=eCUeoPp-5do"
+                  target="_blank"
+                  class="button build w-button"
+                  id="link_"
+                  >POGLEDAJ</a
+                >
+              </div>
+            </div>
+          </div>
+          <br />
+          <div role="listitem" class="w-dyn-item">
+            <div class="learning-card">
+              <div class="number-cirkle"><div>5</div></div>
+              <div class="inner-learning-box">
+                <h4 class="h4-quote margingb-8">
+                  How to create a Highly effective and High Performing Team
+                </h4>
+                <div class="arena-text marginb-24">
+                  Ovo je koncept, a ne uputstvo kako napraviti timove koji su
+                  efektivni i koji dostavljaju dobre rezultate. Ti kao menadžer
+                  imaš odgovornost da održavaš tim te da im rješavaš probleme, s
+                  toga je potrebno da znaš kako osposobiti tim koji pravi dobre
+                  rezultate.
+                </div>
+                <a
+                  href="https://www.youtube.com/watch?v=cJ8aia6PmWk&amp;list=PLnK5zM5iV7zHDi9r2yDzSBIOaaMBFcv0e&amp;index=11"
+                  target="_blank"
+                  class="button build w-button"
+                  id="link_"
+                  >POGLEDAJ</a
+                >
+              </div>
+            </div>
+          </div>
+          <br />
+          <div role="listitem" class="w-dyn-item">
+            <div class="learning-card">
+              <div class="number-cirkle"><div>6</div></div>
+              <div class="inner-learning-box">
+                <h4 class="h4-quote margingb-8">
+                  How to write a good User Story
+                </h4>
+                <div class="arena-text marginb-24">
+                  Način pisanja User Storija te zašto su potrebni. Ovo je
+                  jednostavno uputstvo koje je ujedno i osnova.
+                </div>
+                <a
+                  href="https://www.youtube.com/watch?v=LEPLaYcdgeg&amp;list=PLnK5zM5iV7zHDi9r2yDzSBIOaaMBFcv0e&amp;index=2"
+                  target="_blank"
+                  class="button build w-button"
+                  id="link_"
+                  >POGLEDAJ</a
+                >
+              </div>
+            </div>
+          </div>
+          <br />
+          <div role="listitem" class="w-dyn-item">
+            <div class="learning-card">
+              <div class="number-cirkle"><div>7</div></div>
+              <div class="inner-learning-box">
+                <h4 class="h4-quote margingb-8">
+                  Definition of Ready &amp; Definition of Done
+                </h4>
+                <div class="arena-text marginb-24">
+                  Direktno se veže za prethodnu temu. Odnosi se na postavljanje
+                  jasnih očekivanja kad nešto može početi sa razvojem i kad je
+                  završeno.
+                </div>
+                <a
+                  href="https://www.youtube.com/watch?v=4uHoW3c2EFs"
+                  target="_blank"
+                  class="button build w-button"
+                  id="link_"
+                  >POGLEDAJ</a
+                >
+              </div>
+            </div>
+          </div>
+          <br />
+          <div role="listitem" class="w-dyn-item">
+            <div class="learning-card">
+              <div class="number-cirkle"><div>8</div></div>
+              <div class="inner-learning-box">
+                <h4 class="h4-quote margingb-8">
+                  How to build a Kanban/Scrum Board?
+                </h4>
+                <div class="arena-text marginb-24">
+                  Sigurno si se već susretao/la sa sličnim načinom rada u
+                  dosadašnjem životu. Ovo je osnovni model koji će ti koristiti
+                  i bez kojeg ne možeš voditi tim i projekt uspješno.
+                </div>
+                <a
+                  href="https://www.youtube.com/watch?v=-eRzaXeu4-E"
+                  target="_blank"
+                  class="button build w-button"
+                  id="link_"
+                  >POGLEDAJ</a
+                >
+              </div>
+            </div>
+          </div>
+          <br />
+          <div role="listitem" class="w-dyn-item">
+            <div class="learning-card">
+              <div class="number-cirkle"><div>9</div></div>
+              <div class="inner-learning-box">
+                <h4 class="h4-quote margingb-8">
+                  Agile Product Backlog with User Story Mapping
+                </h4>
+                <div class="arena-text marginb-24">
+                  Ovaj se sadržaj više fokusira na rolu Product Ownera čiji je
+                  zadatak da razumije klijentove potrebe te iste sa timom
+                  zajedno isplanira i razvije. Ovo je jedna od osnovnih i
+                  mandatornih tema koje trebaš poznavati.
+                </div>
+                <a
+                  href="https://www.youtube.com/watch?v=6ojIZ81PfJc"
+                  target="_blank"
+                  class="button build w-button"
+                  id="link_"
+                  >POGLEDAJ</a
+                >
+              </div>
+            </div>
+          </div>
+          <br />
+          <div role="listitem" class="w-dyn-item">
+            <div class="learning-card">
+              <div class="number-cirkle"><div>10</div></div>
+              <div class="inner-learning-box">
+                <h4 class="h4-quote margingb-8">Understanding Scrum Metrics</h4>
+                <div class="arena-text marginb-24">
+                  Menadžerska rola, koja god da je u pitanju, ima određene
+                  metrike. Ovo je minimum koji je potrebno da poznaješ kako bi
+                  bio/la u stanju da uspješno vodiš produkt.
+                </div>
+                <a
+                  href="https://www.youtube.com/watch?v=qD14aI1vhIc"
+                  target="_blank"
+                  class="button build w-button"
+                  id="link_"
+                  >POGLEDAJ</a
+                >
+              </div>
+            </div>
+          </div>
+          <br />
+          <div role="listitem" class="w-dyn-item">
+            <div class="learning-card">
+              <div class="number-cirkle"><div>11</div></div>
+              <div class="inner-learning-box">
+                <h4 class="h4-quote margingb-8">Story Points Estimation</h4>
+                <div class="arena-text marginb-24">
+                  Jedna od ključnih stvari pri komunikaciji sa razvojnim timom
+                  su i Story Point estimacije. Potrebno je da razumiješ ovu temu
+                  veoma dobro, jer će biti krucijalna pri samom procesu.
+                </div>
+                <a
+                  href="https://www.youtube.com/watch?v=vvr-Fd1xYCI"
+                  target="_blank"
+                  class="button build w-button"
+                  id="link_"
+                  >POGLEDAJ</a
+                >
+              </div>
+            </div>
+          </div>
+          <br />
+          <div role="listitem" class="w-dyn-item">
+            <div class="learning-card">
+              <div class="number-cirkle"><div>12</div></div>
+              <div class="inner-learning-box">
+                <h4 class="h4-quote margingb-8">
+                  Agile Product Ownership in a Nutshell
+                </h4>
+                <div class="arena-text marginb-24">
+                  Product Owner je&nbsp; jedna od menadžerskih rola čiji je
+                  zadatak da prije svega ostvariti jasnu komunikaciju te onda
+                  sve ostale zadatke poput menadžovanja backlog-a.
+                </div>
+                <a
+                  href="https://www.youtube.com/watch?v=502ILHjX9EE"
+                  target="_blank"
+                  class="button build w-button"
+                  id="link_"
+                  >POGLEDAJ</a
+                >
+              </div>
+            </div>
+          </div>
+          <br />
+          <div role="listitem" class="w-dyn-item">
+            <div class="learning-card">
+              <div class="number-cirkle"><div>13</div></div>
+              <div class="inner-learning-box">
+                <h4 class="h4-quote margingb-8">Jira Tutorial for Beginners</h4>
+                <div class="arena-text marginb-24">
+                  Jira je jedno od najpopularnijih rješenja koje koriste
+                  menadžeri u razvoju softwera, ujedno je i mi u Tech387
+                  koristimo. Potrebno je da savladaš osnove Jire i njenih
+                  funkcionalnosti.
+                </div>
+                <a
+                  href="https://www.youtube.com/watch?v=nHuhojfjeUY&amp;t=1418s"
+                  target="_blank"
+                  class="button build w-button"
+                  id="link_"
+                  >POGLEDAJ</a
+                >
+              </div>
+            </div>
+          </div>
+          <br />
+          <div role="listitem" class="w-dyn-item">
+            <div class="learning-card">
+              <div class="number-cirkle"><div>14</div></div>
+              <div class="inner-learning-box">
+                <h4 class="h4-quote margingb-8">Cloud Computing</h4>
+                <div class="arena-text marginb-24">
+                  Iako nije direktno vezana za tvoju rolu, potrebno je da znaš
+                  šta je to Cloud i zašto se koristi.
+                </div>
+                <a
+                  href="https://www.youtube.com/watch?v=M988_fsOSWo"
+                  target="_blank"
+                  class="button build w-button"
+                  id="link_"
+                  >POGLEDAJ</a
+                >
+              </div>
+            </div>
+          </div>
+          <br />
+          <div role="listitem" class="w-dyn-item">
+            <div class="learning-card">
+              <div class="number-cirkle"><div>15</div></div>
+              <div class="inner-learning-box">
+                <h4 class="h4-quote margingb-8">What are personas?</h4>
+                <div class="arena-text marginb-24">
+                  Obaveza Menadžera je da mimo vođenja tima razumije i sam
+                  produkt, stoga će ti ovo znanje koristiti u inicijalnim
+                  koracima te kada dođu pitanja poput "Da li nam treba ova
+                  funkcionalnost?". Ako budeš imao/la vremena, preporučujemo ti
+                  da pogledaš više sadržaja na ovu temu.
+                </div>
+                <a
+                  href="https://www.youtube.com/watch?v=XnG4c4gXaQY"
+                  target="_blank"
+                  class="button build w-button"
+                  id="link_"
+                  >POGLEDAJ</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br />
+    <br />
+    {% else %}
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="navbar-brand" id="link_" href="{{ url_for('login_page') }}"
+            >Login</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="navbar-brand"
+            id="link_"
+            href="{{ url_for('register_page') }}"
+            >Register</a
+          >
+        </li>
+      </ul>
+    </nav>
+    {% endif %}
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+  <style>
+    body {
+      background-color: #ffffff;
+      color: rgb(0, 0, 0);
+    }
+
+    #link_:hover {
+      color: rgb(56, 255, 82);
+    }
+
+    .center {
+      margin: auto;
+      width: 60%;
+      padding: 10px;
+      text-align: left;
+      padding-top: 5%;
+    }
+
+    /* .navbar-default {
+    background-color: black;
+    border-color: wheat;
+} */
+  </style>
+</html>

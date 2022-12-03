@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+      crossorigin="anonymous"
+    />
+
+    <title>Quality Assurance</title>
+  </head>
+
+  <body>
+    {% if current_user.is_authenticated %}
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+      <!-- <nav class="class="navbar navbar-dark bg-dark""></nav> sa dropdown menijem! -->
+      <a class="navbar-brand" href="#">Product Arena</a>
+      <!-- <img src="https://imgur.com/9bxjdgJ" width="222" height="222"> -->
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="navbar-brand" id="link_" href="{{ url_for('home_page') }}"
+              >Pocetna <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="navbar-brand"
+              id="link_"
+              href="{{ url_for('fullstack_page') }}"
+              >Full Stack Developer</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="navbar-brand"
+              id="link_"
+              href="{{ url_for('backend_page') }}"
+              >Backend Developer</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="navbar-brand" id="link_" href="{{ url_for('qa_page') }}"
+              >Quality Assurance</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="navbar-brand" id="link_" href="{{ url_for('uiux_page') }}"
+              >UI/UX Dizajner</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="navbar-brand" id="link_" href="#">Menadzment Role</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" id="link_"
+              >Welcome, {{ current_user.username }}
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="link_" href="{{ url_for('logout_page') }}"
+              >Logout
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="center">
+      <div class="head-page">
+        <h3 class="h3-about-title aligne-left"><b>Quality Assurance</b></h3>
+        <div class="about-text">
+          Razvoj softwera je kao slaganje Lego kockica, putem koda se prave
+          programi koji izvršavaju određenu radnju te služe svrhi. Cilj
+          programiranja nije da se završi samo task, već da taj kod koji je
+          napravljen ima smisao i da izvršava ono što mu je svrha!
+          <br /><br />Da bi software bio što bolji, bitno je da broj bug-ova
+          koji ode u produkciju bude što manji te da nema kritičnih bug-ova koji
+          sprečavaju krajnjeg korisnika da koristi software.<br /><br />Baš u
+          tom procesu dolazi rola Quality Assuranca, da li manuelnog da li
+          inžinjera! Cilj ovih rola je da smanje broj bug-ova te da ih pronađu
+          prije nego što dođu do krajnjeg korisnika, pri tome da je proces
+          testiranja što brži. <br /><br />Savjet, što više vježbaj i doslovno
+          kopiraj kod sa tutoriala i testiraj to što je napisano! Također,
+          usvajaj stečeno znanje te koristi što više GitHub i commit-aj kod na
+          isti. Mimo praktičnog dijela bitno je da razumiješ i teoretski dio te
+          da shvatiš osnove Software testiranja! 🙏<br /><br />
+        </div>
+      </div>
+      <br />
+      <div class="w-dyn-list">
+        <div role="list" class="w-dyn-items">
+          <div role="listitem" class="w-dyn-item">
+            <div class="learning-card">
+              <div class="number-cirkle"><div>1</div></div>
+              <div class="inner-learning-box">
+                <h4 class="h4-quote margingb-8"><b>Software Testing</b></h4>
+                <div class="arena-text marginb-24">
+                  Uvod u testiranje softera
+                </div>
+                <a
+                  href="https://www.youtube.com/watch?v=ILkT_HV9DVU&amp;t=4s"
+                  class="button build w-button"
+                  >POGLEDAJ</a
+                >
+              </div>
+            </div>
+          </div>
+          <br />
+          <div role="listitem" class="w-dyn-item">
+            <div class="learning-card">
+              <div class="number-cirkle"><div>2</div></div>
+              <div class="inner-learning-box">
+                <h4 class="h4-quote margingb-8">
+                  <b>Writing Test Cases in Manual Testing</b>
+                </h4>
+                <div class="arena-text marginb-24">
+                  Veoma korisno za početnike na koji način da dokumentuju
+                  manuelne testove, ovo će biti od koristi kad se počne raditi
+                  automation testing.
+                </div>
+                <a
+                  href="https://www.youtube.com/watch?v=g0PrXoWKM2Y"
+                  class="button build w-button"
+                  >POGLEDAJ</a
+                >
+              </div>
+            </div>
+          </div>
+          <br />
+          <div role="listitem" class="w-dyn-item">
+            <div class="learning-card">
+              <div class="number-cirkle"><div>3</div></div>
+              <div class="inner-learning-box">
+                <h4 class="h4-quote margingb-8"><b>GitHub for Beginners</b></h4>
+                <div class="arena-text marginb-24">
+                  Da bi se kod testirao potrebno je da se isti pokrene na
+                  računaru testera, baš radi toga je potrebno da QA role imaju
+                  iskustvo za GitHub-om i njegovim korištenjem, kako bi mogli
+                  imati što bolju kolaboraciju sa razvojnim timom.
+                </div>
+                <a
+                  href="https://www.youtube.com/watch?v=tRZGeaHPoaw"
+                  class="button build w-button"
+                  >POGLEDAJ</a
+                >
+              </div>
+            </div>
+          </div>
+          <br />
+          <div role="listitem" class="w-dyn-item">
+            <div class="learning-card">
+              <div class="number-cirkle"><div>4</div></div>
+              <div class="inner-learning-box">
+                <h4 class="h4-quote margingb-8">
+                  <b>Build a Flutter app and test it</b>
+                </h4>
+                <div class="arena-text marginb-24">
+                  Ovaj tutorial je veoma koristan, jer se pravi aplikacija,
+                  zatim se testira. Obavezno je da se ovaj tutorial čitav prođe
+                  te da istu aplikaciju napraviš na svim računaru.
+                </div>
+                <a
+                  href="https://www.youtube.com/watch?v=aiTTClKJbnw"
+                  class="button build w-button"
+                  >POGLEDAJ</a
+                >
+              </div>
+            </div>
+          </div>
+          <br />
+          <div role="listitem" class="w-dyn-item">
+            <div class="learning-card">
+              <div class="number-cirkle"><div>5</div></div>
+              <div class="inner-learning-box">
+                <h4 class="h4-quote margingb-8"><b>Python for Begginers</b></h4>
+                <div class="arena-text marginb-24">
+                  U slučaju da nemaš programerskog iskustva preporučujemo ti da
+                  pogledaš ovaj tutorial detaljno, tek onda da pređeš na
+                  naredni.
+                </div>
+                <a
+                  href="https://www.youtube.com/watch?v=8124kv-632k"
+                  class="button build w-button"
+                  >POGLEDAJ</a
+                >
+              </div>
+            </div>
+          </div>
+          <br />
+          <div role="listitem" class="w-dyn-item">
+            <div class="learning-card">
+              <div class="number-cirkle"><div>6</div></div>
+              <div class="inner-learning-box">
+                <h4 class="h4-quote margingb-8"><b>Python Automation</b></h4>
+                <div class="arena-text marginb-24">
+                  Kroz ovaj tutorial ćeš naučiti kako se skoro sve može
+                  automatizirati, svi manuelni koraci koje bi uradio/la, možeš
+                  putem skripte automatizirati te ubrzati sam proces testiranja.
+                </div>
+                <a
+                  href="https://www.youtube.com/watch?v=s8XjEuplx_U&amp;t=2625s"
+                  class="button build w-button"
+                  >POGLEDAJ</a
+                >
+              </div>
+            </div>
+          </div>
+          <br />
+          <div role="listitem" class="w-dyn-item">
+            <div class="learning-card">
+              <div class="number-cirkle"><div>7</div></div>
+              <div class="inner-learning-box">
+                <h4 class="h4-quote margingb-8"><b>API Load Testing</b></h4>
+                <div class="arena-text marginb-24">
+                  Veoma bitan korak prije nego što se software objavi u
+                  produkciju. Bitno je da se testira koliko korisnika i zahtjeva
+                  može podnijeti API te u kojem momentu prestaje raditi kao što
+                  je bilo planirano.
+                </div>
+                <a
+                  href="https://www.youtube.com/watch?v=r-Jte8Y8zag"
+                  class="button build w-button"
+                  >POGLEDAJ</a
+                >
+              </div>
+            </div>
+          </div>
+          <br />
+          <div role="listitem" class="w-dyn-item">
+            <div class="learning-card">
+              <div class="number-cirkle"><div>8</div></div>
+              <div class="inner-learning-box">
+                <h4 class="h4-quote margingb-8"><b>Postman API Testing</b></h4>
+                <div class="arena-text marginb-24">
+                  Veoma koristan kurs kako testirati API putem Postmana. Postman
+                  nudi opciju da se skoro svi moderni protokoli testiraju te da
+                  se requesti koji se šalju prema API-ju, automatiziraju.
+                </div>
+                <a
+                  href="https://www.youtube.com/watch?v=VywxIQ2ZXw4"
+                  class="button build w-button"
+                  >POGLEDAJ</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br />
+    <br />
+
+    {% else %}
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="navbar-brand" id="link_" href="{{ url_for('login_page') }}"
+            >Login</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="navbar-brand"
+            id="link_"
+            href="{{ url_for('register_page') }}"
+            >Register</a
+          >
+        </li>
+      </ul>
+    </nav>
+    {% endif %}
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+  <style>
+    body {
+      background-color: #ffffff;
+      color: rgb(0, 0, 0);
+    }
+
+    #link_:hover {
+      color: rgb(56, 255, 82);
+    }
+
+    .center {
+      margin: auto;
+      width: 60%;
+      padding: 10px;
+      text-align: left;
+      padding-top: 5%;
+    }
+
+    /* .navbar-default {
+    background-color: black;
+    border-color: wheat;
+} */
+  </style>
+</html>
